@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pulse Board</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <aside>
+      <p class="brand">Pulse Board</p>
+      <nav>
+        <button data-view="overview" class="active">Overview</button>
+        <button data-view="queue">Fila</button>
+        <button data-view="slo">SLO</button>
+      </nav>
+    </aside>
+    <main>
+      <header>
+        <div>
+          <h1 id="heading">Overview</h1>
+          <p class="muted">catalogo de servicos, deploys e saude com contrato HTTP estavel</p>
+        </div>
+        <span class="pill live">live mock</span>
+      </header>
+      <section class="kpis">
+        <article><small>Volume 24h</small><strong id="kpi-volume">—</strong></article>
+        <article><small>SLA</small><strong id="kpi-sla">—</strong></article>
+        <article><small>Em risco</small><strong id="kpi-risk">—</strong></article>
+        <article><small>Status dominante</small><strong id="kpi-status">—</strong></article>
+      </section>
+      <section class="grid">
+        <div class="panel">
+          <h2>Distribuicao</h2>
+          <canvas id="chart" width="560" height="220"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Eventos</h2>
+          <ul id="events"></ul>
+        </div>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
